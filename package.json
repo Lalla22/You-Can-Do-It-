@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "you-can-do-it-",
+  "description": "Black Wing Hacks Demo 2021",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lalla22/You-Can-Do-It-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lalla22/You-Can-Do-It-/issues"
+  },
+  "homepage": "https://github.com/Lalla22/You-Can-Do-It-#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
