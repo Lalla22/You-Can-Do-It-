@@ -1,4 +1,4 @@
-const { google } = require('googleleapis')
+const { google } = require('googleapis')
 
 const { OAuth2 } = google.auth
 
@@ -8,7 +8,7 @@ const oAuth2Client = new OAuth2('725875135322-ntvidf9jg41l9onofhqo593poaj22p6m.a
 oAuth2Client.setCredentials({refresh_token: '1//04tbg88IcQwP6CgYIARAAGAQSNwF-L9IrfiSiGsVX1dECNHuA1QJcJ0vachpvhjPrhHyrameHpQJbly001jWyY3OZVN7Z5mmuVuA',
 })
 
-const calendar = google.caldendar({ version: 'v3', auth: oAuth2Client })
+const calendar = google.calendar({ version: 'v3', auth: oAuth2Client })
 
 // Create a new event start date instance for temp uses in our calendar.
 const eventStartTime = new Date()
@@ -22,10 +22,10 @@ eventEndTime.setMinutes(eventEndTime.getMinutes() + 45)
 //dummy test event
 const event = {
   summary: 'Task to be done',
-  location: '515 Malcolm X Boulevard (135th St and, Malcolm X Blvd, New York, NY 10037'
-  description: 'Daily Reminder to do task'
-
-  start:{ }
+  location: '515 Malcolm X Boulevard (135th St and, Malcolm X Blvd, New York, NY 10037',
+  description: 'Daily Reminder to do task.',
+  colorId: 1,
+  start: { 
    dateTime: eventStartTime,
    timeZone: 'America/New York',
 },
@@ -34,11 +34,11 @@ const event = {
     timeZone: 'America/New York',
 
  },
- colorId: 1, 
+ 
 }
 
 
-calendar.freebust.query( 
+calendar.freebusy.query( 
 {
   resource:{
   timeMin: eventStartTime, 
@@ -50,7 +50,7 @@ calendar.freebust.query(
  (err, res) => {
     if(err) return console.error('Free Busy Query Error: ', err)
 
-    const eventsArr = res.data.calendars.primary.busy
+    const eventArr = res.data.calendars.primary.busy
 
     // Check if event array is empty which means we are not busy
     if (eventArr.length === 0)
