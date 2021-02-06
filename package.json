@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Lalla22/You-Can-Do-It-#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "googleapis": "^67.0.0"
   }
 }
