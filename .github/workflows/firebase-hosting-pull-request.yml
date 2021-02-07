@@ -11,7 +11,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BLACK_WINGS_HACKS }}'
-          projectId: black-wings-hacks
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_YOU_CAN_DO_IT_STEP_BY_STEP }}'
+          projectId: you-can-do-it-step-by-step
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
