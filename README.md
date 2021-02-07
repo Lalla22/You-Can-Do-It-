@@ -6,9 +6,10 @@ A web application project that checks on the user severeal times a day and encou
 
 Features: 
 - integrate with caldendar
-- 
-- 
+- Notification for users on upcoming tasks 
+- If user is not doing their tasks let accountability partner know so they can check on them
 
 Development process
-Backend:
-Design: 
+Backend: React, Node.js
+Design (Frontend): Figma, HTML, Javascript, CSS
+API's: Google Caldendar
